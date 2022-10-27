@@ -4,7 +4,6 @@ import Image from 'next/image'
 import sanityClient from '../../../libs/Client'
 import imageUrlBuilder from '@sanity/image-url'
 import { M2_Const, Rec, Banios_comp, Arrow1 } from 'ui/constants'
-import { separator } from '../../../libs/complementos'
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -14,6 +13,11 @@ export default function PropiedadList({propiedad}){
         return img
     }
     const [propiedades, setPropiedades] = useState(null);
+    function separator(numb) {
+        var str = numb.toString().split(".");
+        str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return str.join(".");
+    }
     useEffect(() => {
 		sanityClient.fetch(
 		    `*[_type == "propiedades" && categoria->.category == $propiedad][0..8]{
@@ -23,13 +27,13 @@ export default function PropiedadList({propiedad}){
 		)
 		.then((data) => setPropiedades(data))
 		.catch(console.error);
-	}, []);
+	});
     return(
         <>
             {propiedades?.map((propiedad, index) =>(
-                <Link  href={{ pathname: '/propiedad/[slug]', query: { slug: propiedad.slug.current }}} key={index}>
+                <Link  href={{ pathname: '/propiedad/[slug]', query: { slug: propiedad.slug.current }}}>
                     <a>
-                        <li className='propiedad card'>
+                        <li className='propiedad card' key={index}>
                             {propiedad.imagesGallery?.map((img, index) => (
                                 index <= 0 ?
                                     <Image src={urlForce(img.asset).url()} width={416} height={289} layout={"responsive"} className="card-img-top" alt={propiedad?.name} key={index} />
@@ -42,7 +46,7 @@ export default function PropiedadList({propiedad}){
                                 </div>
                                 <h5 className="card-title">{propiedad?.name}</h5>
                                 <p className="card-text">{propiedad?.address}</p>
-                                <h4 className="price">${propiedad?.sale ? separator(propiedad.sale) : propiedad?.income ? separator(propiedad?.income) : "No hay precio de Venta/Renta"}</h4>
+                                <h4 className="price">${separator(propiedad?.sale)}</h4>
                                 <div className='row comp'>
                                     <div className='col'><Image src={M2_Const} alt="pin" width="16" height="16" layout={"fixed"} />{propiedad?.construction > 0 ? <>{propiedad?.construction}</> : <>0</>}<span>m2</span></div>
                                     <div className='col'><Image src={Rec} alt="pin" width="16" height="16" layout={"fixed"} /> {propiedad?.bedrooms > 0 ? <>{propiedad?.bedrooms}</> : <>0</> } <span>Rec.</span></div>

@@ -85,13 +85,7 @@ import LomasMobile from './icons/lomas-home-movil.svg'
 import ArrowDown from './icons/down-arrow.svg'
 import WhatsApp from './icons/wa-cta.svg'
 import PhoneCTA from './icons/phone-cta.svg'
-import Alberca from './icons/alberca.svg'
-import Arco from './icons/arco-de-acceso.svg'
-import Juegos from './icons/juegos-infantiles.svg'
-import Firepit from './icons/firepit.svg'
-import Salon from './icons/salon-de-eventos.svg'
-import GYM from './icons/gimnasio.svg'
-import Elevador from './icons/elevador.svg'
+
 export {
     Logo,
     LomasMobile,
@@ -179,12 +173,5 @@ export {
     Asesor3,
     ArrowDown,
     WhatsApp,
-    PhoneCTA,
-    Alberca,
-    Arco,
-    Juegos,
-    Firepit,
-    Salon,
-    GYM,
-    Elevador
+    PhoneCTA
 }

@@ -13,8 +13,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@babel/core": "^7.19.6",
-    "@babel/eslint-parser": "^7.19.1",
     "eslint-config-custom": "*",
     "prettier": "latest",
     "turbo": "latest"
@@ -22,5 +20,5 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "packageManager": "npm@8.15.0"
+  "packageManager": "yarn@1.22.19"
 }

@@ -16,8 +16,8 @@ import { Cover1,
       } from "ui/constants"
 import { M2_Const, Rec, Banios_comp, Arrow1 } from 'ui/constants'
 import imageUrlBuilder from '@sanity/image-url'
-import Client from '../libs/Client'
-const builder = imageUrlBuilder(Client)
+import sanityClient from '../libs/Client'
+const builder = imageUrlBuilder(sanityClient)
 
 export default function Search(){
     const [propiedades, setPropiedades] = useState(null);
@@ -37,7 +37,7 @@ export default function Search(){
     }
     useEffect(() => {
         if(update == propiedades){
-            Client.fetch(
+            sanityClient.fetch(
                 `*[_type == "propiedades" && categoria->.category == $cat && availability == $disp && sale > $numberMin && sale < $numberMax ][0..11]{
                     ...,
                     categoria->

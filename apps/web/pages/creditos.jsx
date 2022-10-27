@@ -5,10 +5,10 @@ import { ParallaxBanner } from 'react-scroll-parallax'
 import { CoverCreditos1, ArrowSend, Img1, Img2, Img3, BannerBanks, Banorte, Bbva, HSBC, Santander, Scotiabank, Agente } from 'ui/constants'
 import Forms from '../src/Components/Forms/Form'
 import Link from 'next/link'
-import Client from '../libs/Client'
+import SanityClient from '../libs/Client'
 import imageUrlBuilder from '@sanity/image-url'
 
-const builder = imageUrlBuilder(Client)
+const builder = imageUrlBuilder(SanityClient)
 
 function Creditos({creditos}){
     const [element1, setElement1] = useState(false)
@@ -316,7 +316,7 @@ function Creditos({creditos}){
 
 export async function getStaticProps(context) {
     // It's important to default the slug so that it doesn't return "undefined"
-    const creditos = await Client.fetch(
+    const creditos = await SanityClient.fetch(
       `
         *[_type == "credits" ][0]{
           ...

@@ -15,11 +15,6 @@ export default function SearchDesk(){
 		.then((data) => setCategories(data))
 		.catch(console.error);
 	}, []);
-    function separator(numb) {
-        var str = numb.toString().split(".");
-        str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        return str.join(".");
-    }
     return(
         <div className='menu'>
             <Formik
@@ -27,7 +22,7 @@ export default function SearchDesk(){
                     propiedad: '',
                     tipo: "",
                     min: "0",
-                    max: "1000000"
+                    max: "10000000"
                 }}
                 onSubmit={ async (values) => {
                     console.log(values)
@@ -63,15 +58,15 @@ export default function SearchDesk(){
                             <div className='col'>
                                 <div className='inputs-range min-max'>
                                     <div className='range'>
-                                        <input type="range" name="min" className="" min="0" max="50000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.min} />
-                                        <input type="range" name="max" className="" min="0" max="50000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.max} />    
+                                        <input type="range" name="min" className="" min="0" max="20000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.min} />
+                                        <input type="range" name="max" className="" min="0" max="20000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.max} />    
                                     </div>
                                     <div className='row d-flex '>
                                         <div className='col-6 d-flex justify-content-start'>
-                                            <span>${separator(props.values.min)}</span>
+                                            <span>${props.values.min}</span>
                                         </div>
                                         <div className='col-6 d-flex justify-content-end'>
-                                            <span>${separator(props.values.max)}</span>
+                                            <span>${props.values.max}</span>
                                         </div>
                                     </div>
                                 </div>

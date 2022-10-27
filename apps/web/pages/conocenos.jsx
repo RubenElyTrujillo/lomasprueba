@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { ParallaxBanner } from 'react-scroll-parallax'
 import Layout from '../src/Layout/Layout'
 import { BannerConocenos1, AboutUs, ConocenosImg1, ConocenosImg2, ConocenosImg3, Compra, Venta, Detalles, Grados, Planos, Material, Alcance, Asesoria, ArrowSend, ArrowDown, Credito, Arrow1 } from 'ui/constants'
-import Client from '../libs/Client'
+import SanityClient from '../libs/Client'
 import imageUrlBuilder from '@sanity/image-url'
 
-const builder = imageUrlBuilder(Client)
+const builder = imageUrlBuilder(SanityClient)
 
 function Conocenos({conocenos}){
     const [element1, setElement1] = useState(false)
@@ -356,7 +356,7 @@ function Conocenos({conocenos}){
 
 export async function getStaticProps(context) {
     // It's important to default the slug so that it doesn't return "undefined"
-    const conocenos = await Client.fetch(
+    const conocenos = await SanityClient.fetch(
       `
         *[_type == "conocenos" ][0]{
           ...
