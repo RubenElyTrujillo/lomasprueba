@@ -1,0 +1,400 @@
+#banner-creditos{
+
+}
+#banner-creditos .parallax-creditos-desk div:first-child{
+    filter: brightness(40%);
+}
+#banner-creditos .parallax-creditos-desk .carousel-caption.content-creditos{
+    bottom: 20%;
+}
+#banner-creditos .parallax-creditos-desk .carousel-caption.content-creditos h1{
+    font-family: 'Silka-bold';
+    font-size: 34px;
+    color: #FFFFFF;
+}
+#banner-creditos .parallax-creditos-desk .carousel-caption.content-creditos .button{
+    text-align: center;
+    margin-top: 10px;
+}
+#banner-creditos .parallax-creditos-desk .carousel-caption.content-creditos .button a{
+    font-family: 'Silka-bold';
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #CC9964;
+    height: 45px;
+    width: 148px;
+}
+#title-creditos{
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+#title-creditos .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px 0px;
+}
+#title-creditos .title{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 34px;
+    color: #181D24;
+    justify-content: center;
+}
+#title-creditos .title h2{
+    width: 638px;
+}
+#title-creditos .title span{
+    color: #CC9964;
+    font-family: 'Silka-bold';
+}
+#pasos-creditos{
+    
+}
+#pasos-creditos .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px 0px;
+}
+#pasos-creditos .holder .row{
+    position: relative;
+    display: flex;
+}
+#pasos-creditos .holder .row .left{
+    width: 50%;
+}
+#pasos-creditos .holder .row .right{
+    width: 50%;
+    position: relative;
+}
+#pasos-creditos .holder .row .left .stocked{
+    display: flex;
+    width: auto;
+    padding-top: 25vh;
+    padding-bottom: 80px;
+    position: sticky;
+    top: 0;
+}
+#pasos-creditos .stocked .accordion .accordion-item{
+    border: none;
+}
+#pasos-creditos .stocked .accordion .accordion-item h2{
+    font-family: 'Silka-bold';
+    font-size: 24px;
+    color: #515761;
+    opacity: 0.4;
+}
+#pasos-creditos .stocked .accordion .accordion-item h2.isElement{
+    color: #CC9964 !important;
+    opacity: 1;
+    transition: all 1s ease;
+}
+#pasos-creditos .stocked .accordion .accordion-item p{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 18px;
+    color: #515761;
+    opacity: 0.4;
+}
+#pasos-creditos .stocked .accordion .accordion-item p.isElement{
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+#pasos-creditos .stocked .accordion .accordion-item:nth-child(1){
+    border-bottom: 1px solid #CC9964;
+}
+#pasos-creditos .stocked .accordion .accordion-item:nth-child(2){
+    border-bottom: 1px solid #CC9964;
+}
+#pasos-creditos .holder .row .right .right-cpm{
+    position: sticky;
+    top: 0;
+}
+#pasos-creditos .holder .row .right .right-cpm span{
+    height: 100vh !important;
+}
+#pasos-creditos .holder .row .right .right-cpm span img{
+    object-fit: cover !important;
+}
+#title-banks{
+    
+}
+#title-banks .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px 0px;
+}
+#title-banks h2{
+    text-align: center;
+    margin: 150px 247px;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 34px;
+    color: #181D24;
+}
+#title-banks h2 span{
+    font-family: 'Silka-bold';
+    font-size: 34px;
+    color: #CC9964;
+}
+#banks{
+
+}
+#banks .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px 0px;
+}
+#banks .parallax-banks-desk{
+    border-radius: 15px;
+}
+#banks .parallax-banks-desk div:first-child{
+    filter: brightness(40%);
+}
+#banks .parallax-banks-desk .row{
+    filter: none !important;
+}
+#banks .parallax-banks-desk .banks{
+    position: absolute;
+    bottom: 40%;
+}
+#banks .parallax-banks-desk .banks .row{
+    padding: 0px 110px;
+}
+#banks .parallax-banks-desk h1{
+    font-family: 'Silka-bold';
+    font-size: 28px;
+    color: #CC9964;
+    margin-bottom: 30px;
+}
+#banks .parallax-banks-mobile{
+    border-radius: 15px;
+}
+#banks .parallax-banks-mobile div:first-child{
+    filter: brightness(40%);
+}
+#banks .parallax-banks-mobile .row{
+    filter: none !important;
+}
+#banks .parallax-banks-mobile .row .bank{
+    display: contents;
+}
+#banks .parallax-banks-mobile .row #carouselExampleSlidesOnly{
+    filter: none !important;
+}
+#banks .parallax-banks-mobile .row #carouselExampleSlidesOnly .carousel-inner{
+    filter: none !important;
+}
+#banks .parallax-banks-mobile .row #carouselExampleSlidesOnly .carousel-inner .carousel-item{
+    filter: none !important;
+}
+#banks .parallax-banks-mobile .row #carouselExampleSlidesOnly .carousel-inner .carousel-item .col{
+    margin: 0 5px;
+}
+#banks .parallax-banks-mobile .banks{
+    position: absolute;
+    bottom: 40%;
+}
+#banks .parallax-banks-mobile .banks .row{
+    padding: 0px 110px;
+}
+#banks .parallax-banks-mobile h1{
+    font-family: 'Silka-bold';
+    font-size: 28px;
+    color: #CC9964;
+    margin-bottom: 30px;
+}
+#form-multistep{
+
+}
+#form-multistep .holder{
+    margin: 150px auto;
+    max-width: 1300px;
+    width: 100%;
+    padding: 0px 0px;
+}
+#form-multistep .holder h3{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 34px;
+    color: #181D24;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 46px;
+}
+#form-multistep .holder h3 span{
+    font-family: 'Silka-bold';
+    font-size: 34px;
+    color: #CC9964;
+}
+#form-multistep .form .row > *{
+    
+}
+#form-multistep .form h5{
+    font-family: 'Silka-bold';
+    font-size: 22px;
+    color: #CC9964;
+}
+#form-multistep .form .form-select{
+    margin: 15px 13px 15px 0px;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 12px;
+    background: #EEEEEE;
+    height: 50px;
+    padding: 15px 16px 15px 16px;
+}
+#form-multistep .form .form-select:focus{
+    box-shadow: none;
+}
+#form-multistep .form .form-control{
+    margin: 15px 13px 15px 0px;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 12px;
+    background: #EEEEEE;
+    height: 50px;
+    padding: 15px 16px 15px 16px;
+}
+#form-multistep .form .form-control:focus{
+    box-shadow: none;
+}
+#form-multistep .form .relleno{
+    height: 65px;
+    margin-bottom: 15px;
+}
+#form-multistep .stepControl a.action{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 12px;
+    color: #515761;
+    text-decoration: none;
+    text-align: center;
+}
+#form-multistep .stepControl a.rotate span{
+    transform: rotateZ(180deg);
+}
+#form-multistep .stepControl button.submit{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: -10px;
+    width: 148px;
+    height: 45px;
+    text-align: center;
+    align-items: center;
+    border: none;
+    margin-right: 104px;
+    background: #CC9964;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+@media (max-width: 767px){
+    #banner-creditos .parallax-creditos-desk .carousel-caption.content-creditos h1{
+        font-size: 26px;
+    }
+    #banner-creditos .parallax-creditos-desk .carousel-caption{
+        left: 0;
+        right: 0;
+    }
+    #banner-creditos .parallax-creditos-desk .carousel-caption.content-creditos .button a{
+        font-size: 16px;
+        height: 40px;
+        width: 126px;
+    }
+    #title-creditos{
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    #title-creditos .holder{
+        padding: 0px 18px;
+    }
+    #title-creditos .title{
+        font-size: 28px;
+    }
+    #pasos-creditos .holder{
+        padding: 0px 17px;
+    }
+    #pasos-creditos .holder .row .left{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #pasos-creditos .holder .row .left .stocked{
+        padding-top: 0px;
+        padding-bottom: 70px;
+    }
+    #pasos-creditos .stocked .accordion .accordion-body{
+        padding: 50px 0;
+    }
+    #pasos-creditos .stocked .accordion .accordion-item h2{
+        font-size: 22px;
+    }
+    #pasos-creditos .stocked .accordion .accordion-item p{
+        font-size: 16px;
+    }
+    #title-banks .holder{
+        padding: 0px 17px;
+    }
+    #title-banks h2{
+        margin: 0px 0px 70px 0px;
+        font-size: 28px;
+    }
+    #title-banks h2 span{
+        font-size: 28px;
+    }
+    #banks .holder{
+        padding: 0px 0px;
+    }
+    #banks .parallax-banks-mobile{
+        border-radius: 0px;
+    }
+    #banks .parallax-banks-mobile .banks{
+        position: absolute;
+        bottom: 40%;
+    }
+    #form-multistep .holder h3{
+        font-family: 'Silka-regular', sans-serif;
+        font-size: 34px;
+        color: #181D24;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 0px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #form-multistep .holder{
+        margin: 110px auto;
+        padding: 0px 17px;
+    }
+    #form-multistep form{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #form-multistep .image{
+        padding-left: 17px;
+        padding-right: 17px;
+        margin-top: 91px;
+    }
+}
+.finish-form h5{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 30%;
+    font-family: 'Silka-bold';
+    font-size: 24px;
+    color: #181D24;
+}
+input[type="date"]:required:invalid{
+    color: transparent;
+    position: relative;
+}
+input[type="date"]:required:invalid::before{
+    content: attr(placeholder);
+    position: absolute;
+    color: #181D24;
+    opacity: 0.7;
+}
+input[type="date"]:required:valid{
+    color: #171C26;
+}
+input[type="date"]:required:valid::before{
+    opacity: 0;
+}

@@ -1,0 +1,9 @@
+#search-list{
+
+}
+#search-list .holder{
+    margin: 0 auto;
+    max-width: 1330px;
+    width: 100%;
+    padding: 50px 70px;
+}

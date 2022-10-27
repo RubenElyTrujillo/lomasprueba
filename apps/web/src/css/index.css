@@ -1,0 +1,540 @@
+#portada{
+
+}
+#portada .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+}
+#portada .portada-carousel #carouselDesktop .carousel-inner{
+    height: 650px !important;
+}
+#portada .portada-carousel .portada-parallax-desk{
+    filter: brightness(40%);
+}
+#portada .portada-carousel .portada-parallax-desk div{
+    transform: translateY(100px) !important;
+}
+#portada .portada-carousel .portada-parallax-mobile{
+    filter: brightness(40%);
+    height: 550px;
+}
+#portada .portada-carousel .portada-parallax-mobile div{
+    transform: translateY(100px) !important;
+}
+#portada .portada-carousel .carousel-caption{
+    z-index: 2;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 70px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1080px;
+    right: 0;
+    left: 0;
+}
+#portada .portada-carousel .carousel-caption h3{
+    font-family: 'Silka-bold';
+    font-size: 34px;
+    color: #EEEEEE;
+    margin-bottom: 30px;
+}
+#portada .portada-carousel .carousel-caption .menu{
+    width: 100%;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 1080px;
+    min-height: 80px;
+    height: 100%;
+}
+#portada .portada-carousel .carousel-caption .menu select{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 16px;
+    background: #EEEEEE;
+    color: #646464;
+    background-image: url('../icons/dropdown.svg');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    -webkit-appearance: none;
+    border: black;
+    height: 50px;
+}
+#portada .portada-carousel .carousel-caption .menu select.propiedad{
+    width: 281px;
+}
+#portada .portada-carousel .carousel-caption .menu select.tipo{
+    width: 201px;
+}
+#portada .portada-carousel .carousel-caption .menu .min-max{
+    width: 332px;
+    height: 50px;
+}
+#portada .portada-carousel .carousel-caption .menu select:focus{
+    border: black;
+    box-shadow: none;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range {
+    background: #EEEEEE;
+    border-radius: 5px;
+    height: 100%;
+    padding-top: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .row {
+    margin-top: 35px;
+    padding: 0 4px;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range span {
+    color: #646464;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 9px;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range{
+    position: relative;
+    margin: 8px;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range] {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    background: #EEEEEE;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]:focus {
+    outline: none;
+} 
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #CC9964;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]:focus::-moz-range-track  {
+    background: #CC9964;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]:focus::-ms-fill-lower {
+    background: #CC9964;
+} 
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]:focus::-ms-fill-upper {
+    background: #CC9964;
+} 
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #CC9964;
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #CC9964;
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]::-webkit-slider-thumb {
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 0px 0px #000;
+    border: 1px solid #CC9964;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #CC9964;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+#portada .portada-carousel .carousel-caption .menu .inputs-range .range input[type=range]::-moz-range-thumb {
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 0px 0px #000;
+    border: 1px solid #CC9964;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #CC9964;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+#portada .portada-carousel .carousel-caption .menu button{
+    font-family: 'Silka-bold';
+    background: #CC9964;
+    color: #FFFFFF;
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+}
+#propiedades{
+    margin-top: 70px;
+}
+#propiedades .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+}
+#propiedades .holder .container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+#propiedades h2{
+    font-family: 'Silka-bold';
+    font-weight: bold;
+    font-size: 34px;
+    color: #181D24;
+    margin-bottom: 50px;
+}
+#propiedades .categorias .nav-tabs{
+    --bs-nav-tabs-border-width: 0px;
+}
+#propiedades .categorias .nav-item{
+    padding-left: 31px;
+    padding-right: 31px;
+}
+#propiedades .categorias .nav-item button{
+    text-transform: uppercase;
+}
+#propiedades .categorias .nav-item span{
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 15px !important;
+}
+#propiedades .categorias .nav-item img{
+    padding: 3px !important;
+    margin-top: 4px !important;
+}
+#propiedades .categorias .nav-link{
+    border-bottom: 4px solid #EEEEEE;
+    font-family: 'Silka-regular', sans-serif;
+    color: #181D24;
+}
+#propiedades .categorias .active{
+    border-bottom: 4px solid #CC9964;
+}
+#conocenos{
+    margin-top: 150px;
+}
+#conocenos .holder{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    max-height: 550px;
+    height: 100%;
+}
+#conocenos .conocenos-parallax-desk div:first-child:after{
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background-image: linear-gradient(270deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.85) 100%) !important;
+}
+
+#conocenos .conocenos-parallax-desk .content p{
+    position: absolute;
+    top: 118px;
+    width: 50%;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 24px;
+    color: #EEEEEE;
+    left: 110px;
+    line-height: 29px;
+}
+#conocenos .conocenos-parallax-desk .content p span{
+    font-family: 'Silka-bold';
+    font-size: 28px;
+    color: #CC9964;
+}
+#conocenos .conocenos-parallax-desk .content p a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#logo{
+
+}
+#logo .holder{
+    margin: -8% auto;
+    max-width: 1300px;
+    width: 100%;
+}
+#logo img{
+    width: 196px !important;
+    height: 186px !important;
+}
+#logo span{
+    z-index: 2;
+}
+#contacto{
+
+}
+#contacto .parallax-contacto-desk {
+    width: 1440px;
+    height: 1116px;
+}
+
+#contacto .holder{
+    margin: 30% auto;
+    max-width: 1300px;
+    width: 100%;
+}
+#contacto .holder .container-fluid h3{
+    font-family: 'Silka-bold';
+    font-size: 34px;
+    color: #181D24;
+    margin: 30px auto;
+}
+#contacto .holder .container-fluid p{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 24px;
+    color: #181D24;
+    margin: 0px 0px 40px 0px;
+}
+#contacto .holder .container-fluid p span{
+    font-family: 'Silka-regular', sans-serif;
+    color: #CC9964;
+}
+#contacto form .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+#contacto form .input-contact input{
+    background: #EEEEEE;
+    color: #515761;
+    font-size: 12px;
+    font-family: 'Silka-regular', sans-serif;
+    height: 50px;
+    border: 1px solid rgba(81,87,97, 0.3);
+}
+#contacto form .input-contact input:focus{
+    box-shadow: none;
+    border: none;
+    border: 1px solid rgba(81,87,97, 0.3);
+}
+#contacto form h6{
+    font-family: 'Silka-bold';
+    font-size: 16px;
+    color: #181D24;
+}
+#contacto form .options-contact input{
+    background: #D1CFC9;
+}
+#contacto form .options-contact input:checked{
+    background: #CC9964;
+    background: #CC9964;
+    border: 1px solid black;
+    box-shadow: none;
+}
+#contacto form .options-contact label{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 14px;
+    color: #515761;
+    margin-left: 10px;
+}
+#contacto form textarea{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 12px;
+    color: #515761;
+    height: 210px;
+    background: #EEEEEE;
+    border: 1px solid rgba(81,87,97, 0.3);
+}
+#contacto form textarea:focus{
+    box-shadow: none;
+    border: none;
+    border: 1px solid rgba(81,87,97, 0.3);
+}
+.isError{
+    border: 1px solid #CC9964 !important;
+    color: #CC9964 !important;
+}
+.isError::placeholder{
+    color: #CC9964 !important;
+}
+#contacto form .submit-contact{
+    text-align: end;
+}
+#contacto form .submit-contact button{
+    background: #CC9964;
+    font-size: 18px;
+    color: #EEEEEE;
+    width: 150px;
+    height: 50px;
+    font-family: 'Silka-bold';
+}
+#contacto form .finalizado{
+    align-items: center;
+    height: 299px;
+}
+#contacto form .finalizado span{
+    margin: 0 auto !important;
+    width: 50px !important;
+    margin-top: 98px !important;
+    height: 50px !important;
+}
+#contacto form .finalizado h3{
+    margin-top: 16px;
+    font-family: 'Silka-bold';
+    font-size: 24px;
+    color: #181D24;
+}
+#contacto .contactos a{
+    text-decoration: none;
+    color: #181D24;
+}
+#contacto .contactos a span {
+    margin: -6px 0 !important;
+}
+#lugares{
+    background: #EEEEEE;
+    min-height: 280px;
+}
+#lugares .holder{
+    margin: 0px auto;
+    max-width: 1300px;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+}
+#lugares .row div{
+    width: 20%;
+}
+#lugares .row h4{
+    font-family: 'Silka-bold';
+    font-size: 9px;
+    color: #515761;
+    margin-bottom: 13px;
+}
+#lugares .row ul{
+    list-style: none;
+    padding: 0;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 9px;
+    color: #515761;
+}
+@media (max-width: 2400px){
+    #contacto .parallax-contacto-desk{
+        height: 1300px !important;
+    }
+    #contacto .holder{
+        margin: 30% auto;
+    }
+}
+@media (max-width: 1300px){
+    #contacto .parallax-contacto-desk{
+        height: 1116px !important;
+    }
+    #contacto .holder{
+        margin: 20% auto;
+    }
+}
+@media (max-width: 767px){
+    #propiedades .categorias .nav-item{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    #portada .portada-carousel .carousel-caption{
+        right: 0;
+        left: 0;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        bottom: 50px;
+    }
+    #portada .portada-carousel .carousel-caption .menu{
+        margin-left: 7px;
+        margin-right: 7px;
+        width: auto;
+        max-height: 140px;
+    }
+    #portada .portada-carousel .carousel-caption h3{
+        font-size: 26px;
+        padding-left: 17px;
+        padding-right: 17px;
+        margin-bottom: 32px;
+    }
+    #portada .portada-carousel .carousel-caption .menu .inputs-range {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #portada .portada-carousel .carousel-caption .menu select{
+        font-size: 12px;
+    }
+    #portada .portada-carousel .carousel-caption .menu button{
+        border-radius: 20px;
+    }
+    #portada .portada-carousel .carousel-caption .menu button i{
+        margin-left: -2px;
+    }
+    #propiedades h2{
+        font-size: 26px;
+        margin-bottom: 31px;
+    }
+    #propiedades{
+        margin-top: 30px;
+    }
+    #propiedades .holder{
+        padding: 0px 0px;
+    }
+    #logo .holder{
+        margin: -8% auto;
+        max-width: 1330px;
+        width: 100%;
+        padding: 0px 36px;
+    }
+    #logo span{
+        width: 63px !important;
+        height: 60px !important;
+        z-index: 2;
+    }
+    #conocenos .holder{
+        padding: 0px 0px;
+    }
+    #conocenos .conocenos-parallax-desk{
+        height: 460px;
+    }
+    #conocenos .conocenos-parallax-desk .content p{
+        top: 0px;
+        left: 0px;
+        font-size: 20px;
+        width: 100%;
+        padding: 70px 17px 0px 17px;
+        line-height: 24px;
+    }
+    #conocenos .conocenos-parallax-desk .content p span{
+        font-size: 22px;
+    }
+    #contacto .holder{
+        padding: 0px 17px;
+        margin: 70% auto;
+    }
+    #contacto .parallax-contacto-desk {
+        height: 1445px !important;
+    }
+    #lugares .holder{
+        padding: 30px 17px;
+    }
+    #lugares .row div {
+        width: 50%;
+        margin-top: 10px;
+    }
+    #lugares .row h4 {
+        margin-bottom: 10px;
+    }
+}
+.contactos div{
+    font-size: 18px;
+}

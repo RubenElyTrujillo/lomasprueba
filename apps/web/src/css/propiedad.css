@@ -1,0 +1,289 @@
+#galeria{
+    background: rgba(151, 151, 151, 0.2);
+}
+#galeria .holder{
+    margin: 0 auto;
+    max-width: 1330px;
+    width: 100%;
+    padding: 170px 70px 60px 70px;
+}
+#galeria .holder .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+}
+#galeria .holder .wrapper div:nth-child(1){
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    margin: auto;
+    cursor: pointer;
+}
+#galeria .holder .wrapper div:nth-child(1) img{
+    border-radius: 10px;
+}
+#galeria .holder .wrapper div:nth-child(1) span:hover{
+    filter: brightness(40%);
+}
+#galeria .holder .wrapper div:nth-child(1n+2){
+    margin: 12px 12px 12px 12px;
+    cursor: pointer;
+}
+#galeria .holder .wrapper div:nth-child(1n+2) img{
+    border-radius: 10px;
+}
+#galeria .holder .wrapper div:nth-child(1n+2) span:hover{
+    filter: brightness(40%);
+}
+ #ReactSimpleImageViewer{
+    margin: 0 !important;
+    z-index: 9999 !important;
+}
+#content{
+
+}
+#content .holder{
+    margin: 0px auto;
+    max-width: 1300px;
+    width: 100%;
+    padding: 50px 0px;
+}
+#content .sku{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 14px;
+    color: #515761;
+}
+#content .categoria span{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    font-family: 'Silka-bold';
+    font-size: 14px;
+    background: #CC9964;
+    color: #EEEEEE;
+    border-radius: 5px;
+}
+#content .titulo h1{
+    font-family: 'Silka-bold';
+    font-size: 26px;
+    color: #181D24;
+    margin-top: 26px;
+}
+#content .direccion h5{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 16px;
+    color: #515761;
+    display: contents;
+}
+#content .precio {
+    margin-top: 30px;
+}
+#content .precio h2{
+    font-family: 'Silka-bold';
+    font-size: 40px;
+    color: #CC9964;
+}
+#content .aminidades .nav-link{
+    padding: 5px 5px !important;
+}
+#content .aminidades p{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 12px;
+    color: #515761 !important;
+}
+#content .aminidades p span{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 20px;
+    color: #515761;
+}
+#content .detalles{
+    padding: 40px 0px;
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+}
+#content .detalles h3{
+    font-family: 'Silka-bold';
+    font-size: 22px;
+    color: #181D24;
+}
+#content .detalles p{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 16px;
+    color: #515761; 
+}
+#content .aminidadesP2{
+    padding: 40px 0px;
+    border-bottom: 1px solid #979797;
+}
+#content .aminidadesP2 h3{
+    font-family: 'Silka-bold';
+    font-size: 22px;
+    color: #181D24;
+}
+#content .aminidadesP2 p{
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 16px;
+    color: #515761; 
+}
+
+#content .video{
+    padding: 40px 0px;
+    border-bottom: 1px solid #979797;
+}
+
+#content .video h3{
+    font-family: 'Silka-bold';
+    font-size: 22px;
+    color: #181D24;
+}
+#content .video div{
+    width: 100% !important;
+    height: 482px !important;
+}
+#content .form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+}
+#content .form h3{
+    height: 28px;
+    font-family: 'Silka-bold';
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #181D24;
+}
+#content .form span{
+    height: 31px;
+    font-family: 'Silka-regular', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+#content .form .formulario {
+    margin-top: 50px;
+}
+#content .form .formulario input{
+    width: 270px;
+    height: 45px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #F4F4F4;
+    border: 1px solid #515761;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    border-radius: 5px;
+    font-family: 'Silka-regular', sans-serif;
+    color: #515761;
+    font-size: 12px;
+}
+#content .form .formulario input:focus-visible{
+    outline: none;
+}
+#content .form .enviar {
+    margin-top: 30px;
+    text-align: end;
+}
+#content .form .enviar button {
+    width: 150px;
+    height: 50px;
+    background: #CC9964;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'Silka-bold';
+    border: none;
+    border-radius: 6px;
+}
+.hubsport-form{
+    background: #EEEEEE;
+    height: auto;
+}
+.hubsport-form #hubspotForm{
+    position: sticky;
+    top: 92px;
+}
+@media (max-width: 767px){
+    #galeria{
+        background: #FFFFFF;
+    }
+    #galeria .holder{
+        padding: 125px 17px 25px 17px;
+    }
+    #galeria .holder .wrapper div:nth-child(1){
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        margin: auto
+    }
+    #galeria .holder .wrapper div:nth-child(1n+2){
+        display: none;
+    }
+    #galeria .holder .wrapper div:nth-child(1) span{
+        width: 330px !important;
+        height: 250px !important;
+    }
+    #content .holder{
+        padding: 0px 17px;
+    }
+    #content .sku{
+        font-size: 12px;
+    }
+    #content .categoria {
+        text-align: end;
+    }
+    #content .categoria span{
+        font-family: 'Silka-bold';
+        font-size: 12px;
+        color: #181D24;
+        border-bottom: 2px solid #CC9964;
+        background: #FFFFFF;
+        border-radius: 0px;
+    }
+    #content .titulo h1{
+        font-size: 24px;
+        margin-top: 24px;
+    }
+    #content .direccion h5{
+        font-size: 14px;
+    }
+    #content .precio {
+        margin-top: 28px;
+    }
+    #content .precio h2{
+        font-size: 38px;
+    }
+    #content .aminidades p{
+        font-size: 12px;
+    }
+    #content .aminidades p span{
+        font-size: 20px;
+    }
+    #content .video div{
+        width: 100% !important;
+        height: 233px !important;
+    }
+    #content .form h3{
+        font-size: 20px;
+    }
+    #content .form span{
+        font-size: 18px;
+    }
+    #content .form .formulario {
+        margin-top: 40px;
+    }
+    #content .form .formulario input{
+        width: 100%;
+        height: 45px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #content .form .enviar {
+        margin-top: 20px;
+        text-align: end;
+    }
+    #content .form .enviar button {
+        width: 116px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

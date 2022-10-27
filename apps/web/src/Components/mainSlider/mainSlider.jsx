@@ -1,0 +1,171 @@
+import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Parallax, Autoplay, EffectFade } from 'swiper'
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+import { buildImages, separator } from '../../../libs/complementos'
+import sanityClient from '../../../libs/Client'
+
+export default function MainSlider({ imagenes }){
+    let schema = Yup.object().shape({
+        propiedad: Yup.mixed().required(),
+        tipo: Yup.mixed().required().oneOf(["Venta", "Renta"])
+    })
+    const [categories, setCategories] = useState(null);
+    const router = useRouter()
+    useEffect(() => {
+		sanityClient.fetch(
+		    `*[_type == "category"]{
+                ...
+            }`
+		)
+		.then((data) => setCategories(data))
+		.catch(console.error);
+	}, []);
+    return(
+        <>
+            <Swiper className='imagen' modules={[Parallax, Autoplay, EffectFade]} autoplay effect="fade">
+                {imagenes.map((imagen, index) =>(
+                    <SwiperSlide key={index}><Image src={buildImages(imagen.asset).url()} layout="fill" alt={`Lomas home Imagen ${index+1}`} /></SwiperSlide>
+                ))}
+            </Swiper>
+            <div className='holder'>
+                <div className='container-fluid'>
+                    <h1>¿Qué tipo de propiedad estás buscando?</h1>
+                    <div className='menu desk'>
+                        <Formik
+                            initialValues={{
+                                propiedad: '',
+                                tipo: "",
+                                min: "0",
+                                max: "10000000"
+                            }}
+                            onSubmit={ async (values) => {
+                                console.log(values)
+                                router.push({
+                                    pathname: "/search",
+                                    query: {
+                                        propiedad: values.propiedad,
+                                        tipo: values.tipo,
+                                        min: values.min,
+                                        max: values.max
+                                    },
+                                })
+                            }}
+                            validationSchema={schema}
+                        >
+                            {props =>(
+                                <Form>
+                                    <div className='row'>
+                                        <div className='col'>
+                                            <Field name="propiedad" as="select" className={`form-select propiedad ${props.errors.propiedad && props.touched.propiedad ? ("isError") : null}`} aria-label="Default select example">
+                                                <option defaultValue>Tipo de propiedad</option>
+                                                {categories?.map((category, index) =>(
+                                                    <option value={category.category} key={index}>{category.category}</option>
+                                                ))}
+                                            </Field>
+                                        </div>
+                                        <div className='col'>
+                                            <Field name="tipo" as="select" className={`form-select tipo ${props.errors.tipo && props.touched.tipo ? ("isError") : null}`} aria-label="Default select example">
+                                                <option defaultValue>¿Venta o Renta?</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Renta">Renta</option>
+                                            </Field>
+                                        </div>
+                                        <div className='col'>
+                                            <div className='inputs-range min-max'>
+                                                <div className='range'>
+                                                    <input type="range" name="min" className="" min="0" max="50000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.min} />
+                                                    <input type="range" name="max" className="" min="0" max="50000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.max} />    
+                                                </div>
+                                                <div className='row d-flex '>
+                                                    <div className='col-6 d-flex justify-content-start'>
+                                                        <span>${separator(props.values.min)}</span>
+                                                    </div>
+                                                    <div className='col-6 d-flex justify-content-end'>
+                                                        <span>${separator(props.values.max)}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='col'>
+                                            <button type="submit" className="btn w-100">Buscar</button>
+                                        </div>
+                                    </div>
+                                </Form>
+                            )}
+                        </Formik>
+                    </div>
+                    <div className='menu mobile'>
+                        <Formik
+                            initialValues={{
+                                propiedad: '',
+                                tipo: "",
+                                min: "0",
+                                max: "10000000"
+                            }}
+                            onSubmit={ async (values) => {
+                                console.log(values)
+                                router.push({
+                                    pathname: "/search",
+                                    query: {
+                                        propiedad: values.propiedad,
+                                        tipo: values.tipo,
+                                        min: values.min,
+                                        max: values.max
+                                    },
+                                })
+                            }}
+                            validationSchema={schema}
+                        >
+                            {props =>(
+                                <Form>
+                                    <div className='row'>
+                                        <div className='col-6'>
+                                            <Field name="propiedad" as="select" className={`form-select ${props.errors.propiedad && props.touched.propiedad ? ("isError") : null}`} aria-label="Default select example">
+                                                <option defaultValue>Tipo de propiedad</option>
+                                                {categories?.map((category, index) =>(
+                                                    <option value={category.category} key={index}>{category.category}</option>
+                                                ))}
+                                            </Field>
+                                        </div>
+                                        <div className='col-6'>
+                                            <Field name="tipo" as="select" className={`form-select ${props.errors.tipo && props.touched.tipo ? ("isError") : null}`} aria-label="Default select example">
+                                                <option defaultValue>¿Venta o Renta?</option>
+                                                <option value="Venta">Venta</option>
+                                                <option value="Renta">Renta</option>
+                                            </Field>
+                                        </div>
+                                    </div>
+                                    <div className='row mt-2'>
+                                        <div className='col-10'>
+                                            <div className='inputs-range'>
+                                                <div className='range'>
+                                                    <input type="range" name="min" className="" min="0" max="50000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.min} />
+                                                    <input type="range" name="max" className="" min="0" max="50000000" step="100000" onChange={props.handleChange} onBlur={props.handleBlur} value={props.values.max} />    
+                                                </div>
+                                                <div className='row d-flex '>
+                                                    <div className='col-6 d-flex justify-content-start'>
+                                                        <span>${separator(props.values.min)}</span>
+                                                    </div>
+                                                    <div className='col-6 d-flex justify-content-end'>
+                                                        <span>${separator(props.values.max)}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='col-2'>
+                                            <button type="submit" className="btn"><i className="bi bi-search"></i></button>
+                                        </div>
+                                    </div>
+                                </Form>
+                            )}
+                        </Formik>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
