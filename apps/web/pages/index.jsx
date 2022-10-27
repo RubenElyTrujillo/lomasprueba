@@ -4,13 +4,7 @@ import Link from 'next/link'
 import Layout from "../src/Layout/Layout"
 import { Formik, Form, Field } from 'formik'
 import { ParallaxBanner } from 'react-scroll-parallax'
-import { Cover1, 
-        Cover2, 
-        Cover3, 
-        CoverMobile1, 
-        CoverMobile2, 
-        CoverMobile3, 
-        Casa, 
+import { Casa, 
         Depart, 
         Terre, 
         Local, 
@@ -28,12 +22,15 @@ import { Cover1,
 import SearchDesk from "../src/Components/Search/SearchDesk"
 import SearchMobile from "../src/Components/Search/SearchMobile"
 import PropiedadList from '../src/Components/List/propiedad'
-import SanityClient from '../libs/Client'
+import Client from '../libs/Client'
 import imageUrlBuilder from '@sanity/image-url'
 import { ScrollParallax } from 'react-just-parallax'
 import * as Yup from 'yup'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Parallax, Autoplay } from 'swiper'
+import MainSlider from '../src/Components/mainSlider/mainSlider'
 
-const builder = imageUrlBuilder(SanityClient)
+const builder = imageUrlBuilder(Client)
 
 function Web({home}) {
   const parallax = useRef()
@@ -51,56 +48,7 @@ function Web({home}) {
   return (
     <Layout title="Lomas Home" description={home.descripcion} keywords={home.keywords}>
       <section className="block" id="portada">
-        <div className="portada-carousel">
-          <div id="carouselDesktop" className="carousel slide d-none d-sm-none d-md-block" data-bs-ride="carousel">
-            <div className="carousel-inner">
-              {home.imagenes_desk.map((img, index) =>(
-                <div className={`carousel-item ${index == 0 ? "active" : ''}`} key={index}>
-                  <ParallaxBanner
-                    className='portada-parallax-desk'
-                    style={{ 
-                      aspectRatio: '2 / 1',
-                    }}
-                    layers={[
-                      {
-                        image: urlForce(img.asset).url(),
-                        speed: -10,
-                      },
-                    ]}
-                  />
-                </div>
-              ))}
-              <div className="carousel-caption" data-aos="fade-up">
-                <h3>¿Qué tipo de propiedad estás buscando?</h3>
-                <SearchDesk />
-              </div>
-            </div>
-          </div>
-          <div id="carouselMobile" className="carousel slide d-block d-sm-block d-md-none" data-bs-ride="carousel">
-            <div className="carousel-inner">
-              {home?.imagenes_mobile?.map((img, index) =>(
-                <div className={`carousel-item ${index == 0 ? "active" : ''}`} key={index}>
-                  <ParallaxBanner
-                    className='portada-parallax-mobile'
-                    style={{ 
-                      aspectRatio: '2 / 1',
-                    }}
-                    layers={[
-                      {
-                        image: urlForce(img.asset).url(),
-                        speed: -10,
-                      },
-                    ]}
-                  />
-                </div>
-              ))}
-              <div className="carousel-caption" data-aos="fade-up">
-                <h3>¿Qué tipo de propiedad estás buscando?</h3>
-                <SearchMobile />
-              </div>
-            </div>
-          </div>
-        </div>
+        <MainSlider imagenes={home?.imagenes_desk} />
       </section>
       <section className="block" id="propiedades" data-aos="fade-up">
         <div className="holder">
@@ -270,19 +218,19 @@ function Web({home}) {
                                     <h6>¿Cómo prefieres que te contactemos?*</h6>
                                     <div className='row'>
                                       <div className='col-4 col-md-4 options-contact'>
-                                        <Field className={`form-check-input ${errors.contacto && touched.contacto ? ("isError") : null}`} type="radio" name="contacto" id="whatsapp" value="WhatsApp" />
+                                        <Field className={` ${errors.contacto && touched.contacto ? ("isError") : null}`} type="radio" name="contacto" id="whatsapp" value="WhatsApp" />
                                         <label className="form-check-label" htmlFor="whatsapp">
                                           Whatsapp
                                         </label>
                                       </div>
                                       <div className='col-4 col-md-4 options-contact'>
-                                        <Field className={`form-check-input ${errors.contacto && touched.contacto ? ("isError") : null}`} type="radio" name="contacto" id="correo" value="Correo" />
+                                        <Field className={` ${errors.contacto && touched.contacto ? ("isError") : null}`} type="radio" name="contacto" id="correo" value="Correo" />
                                         <label className="form-check-label" htmlFor="correo">
                                           Correo
                                         </label>
                                       </div>
                                       <div className='col-4 col-md-4 options-contact'>
-                                        <Field className={`form-check-input ${errors.contacto && touched.contacto ? ("isError") : null}`} type="radio" name="contacto" id="llamada" value="Llamada" />
+                                        <Field className={` ${errors.contacto && touched.contacto ? ("isError") : null}`} type="radio" name="contacto" id="llamada" value="Llamada" />
                                         <label className="form-check-label" htmlFor="llamada">
                                           Llamada
                                         </label>
@@ -387,7 +335,7 @@ function Web({home}) {
 
 export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
-  const home = await SanityClient.fetch(
+  const home = await Client.fetch(
     `
       *[_type == "home" ][0]{
         ...

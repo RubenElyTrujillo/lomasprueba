@@ -5,10 +5,10 @@ import { ParallaxBanner } from 'react-scroll-parallax'
 import { CoverCreditos1, ArrowSend, Img1, Img2, Img3, BannerBanks, Banorte, Bbva, HSBC, Santander, Scotiabank, Agente } from 'ui/constants'
 import Forms from '../src/Components/Forms/Form'
 import Link from 'next/link'
-import SanityClient from '../libs/Client'
+import Client from '../libs/Client'
 import imageUrlBuilder from '@sanity/image-url'
 
-const builder = imageUrlBuilder(SanityClient)
+const builder = imageUrlBuilder(Client)
 
 function Creditos({creditos}){
     const [element1, setElement1] = useState(false)
@@ -211,9 +211,9 @@ function Creditos({creditos}){
                                         <div className='row text-center banks'>
                                             <h1>Trabajamos con los bancos más reconocidos</h1>
                                             <div className='row bank'>
-                                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                                                    <div class="carousel-inner">
-                                                        <div class="carousel-item active">
+                                                <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                                                    <div className="carousel-inner">
+                                                        <div className="carousel-item active">
                                                             <span className="col">
                                                                 <Image src={Bbva} alt="pin" width="160" height="33" layout={"fixed"} />
                                                             </span>
@@ -221,7 +221,7 @@ function Creditos({creditos}){
                                                                 <Image src={Banorte} alt="pin" width="160" height="33" layout={"fixed"} />
                                                             </span>
                                                         </div>
-                                                        <div class="carousel-item">
+                                                        <div className="carousel-item">
                                                             <span className="col">
                                                                 <Image src={Scotiabank} alt="pin" width="160" height="33" layout={"fixed"} />
                                                             </span>
@@ -229,7 +229,7 @@ function Creditos({creditos}){
                                                                 <Image src={HSBC} alt="pin" width="160" height="33" layout={"fixed"} />
                                                             </span>
                                                         </div>
-                                                        <div class="carousel-item">
+                                                        <div className="carousel-item">
                                                             <span className="col">
                                                                 <Image src={Santander} alt="pin" width="160" height="33" layout={"fixed"} />
                                                             </span>
@@ -316,7 +316,7 @@ function Creditos({creditos}){
 
 export async function getStaticProps(context) {
     // It's important to default the slug so that it doesn't return "undefined"
-    const creditos = await SanityClient.fetch(
+    const creditos = await Client.fetch(
       `
         *[_type == "credits" ][0]{
           ...

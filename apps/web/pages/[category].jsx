@@ -8,9 +8,9 @@ import BannerCategory from '../src/Components/BannerCategory/BannerCategory'
 import BannerCategoryFooter from '../src/Components/BannerCategoryFooter/BannerCategoryFooter'
 import SearchCategoryDesk from '../src/Components/SearchCategory/SearchCategoryDesk'
 import SearchCategoryMobile from '../src/Components/SearchCategory/SearchCategoryMobile'
-import sanityClient from '../libs/Client'
+import Client from '../libs/Client'
 import { M2_Const, Rec, Banios_comp, Arrow1 } from 'ui/constants'
-const builder = imageUrlBuilder(sanityClient)
+const builder = imageUrlBuilder(Client)
 
 
 function Category(){
@@ -34,7 +34,7 @@ function Category(){
     }
     function fetchPropieadesWithOutFilter(){
         if(update == search){
-            sanityClient.fetch(
+            Client.fetch(
                 `*[_type == "propiedades" && categoria->.slug.current == $category] | order(_id) [0..11]{
                     ...,
                     categoria->
@@ -49,7 +49,7 @@ function Category(){
     }
     function fetchPropieadesWithFilter(){
         if(update == search){
-            sanityClient.fetch(
+            Client.fetch(
                 `*[_type == "propiedades" && categoria->.slug.current == $category && ubicacion->.slug.current == $ubi && availability == $tipo && bathroom == $habi && sale > $min && sale < $max]| order(_id) [0..11]{
                     ...,
                     categoria->,
